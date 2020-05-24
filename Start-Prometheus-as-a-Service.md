@@ -1,0 +1,1 @@
+Stop the running Prometheus process that we left running in the previous lecture, and copy the new files to bin folder.
