@@ -1,6 +1,6 @@
 We will install the latest version of Prometheus on our server.
 
-Before you start, you will need a Linux server. Preferably an unrestricted Ubuntu 18.04 LTS Server with root access, since all the commands demonstrated in this course were executed on Ubuntu 18.04 LTS Server.
+Before you start, you will need a Linux server. Preferably an unrestricted Ubuntu 16.04 LTS Server with root access, since all the commands demonstrated in this are executed on Ubuntu 16.04 LTS Server.
 
 You can use other operating systems, such as Centos 7, but all commands in the course are prepared for Ubuntu 18, so you will experience some differences in syntax or equivalent commands which you may need to research yourself if I can't help you.
 
