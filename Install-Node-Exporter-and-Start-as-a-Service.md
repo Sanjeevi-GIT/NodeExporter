@@ -32,8 +32,9 @@ ExecStart=/usr/local/bin/node_exporter
 
 [Install]
 WantedBy=multi-user.target
-Now start and check the service is running.
+
 ```
+Now start and check the service is running.
 ```
 systemctl daemon-reload
 sudo service node-exporter start
