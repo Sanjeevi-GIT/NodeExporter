@@ -20,8 +20,9 @@ ExecStart=/usr/local/bin/prometheus/prometheus --config.file=/usr/local/bin/prom
 
 [Install]
 WantedBy=multi-user.target
-Now start and check the service is running.
 ```
+Now start and check the service is running.
+
 ```
 sudo service prometheus start
 sudo service prometheus status
