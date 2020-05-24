@@ -27,5 +27,6 @@ Add our test expression as a recording rule
      - name: custom_rules
        rules:
          - record: node_memory_MemFree_percent
-           expr: 100 - (100 * node_memory_MemFree_bytes / node_memory_MemTotal_bytes)
+           expr: 100 - (100 * node_memory_MemFree_bytes / node_memory_MemTotal_bytes) ```````
+
 
