@@ -44,8 +44,8 @@ ExecStart=/usr/local/bin/alertmanager/alertmanager \
         --config.file=/usr/local/bin/alertmanager/alertmanager.yml 
 [Install]
 WantedBy=multi-user.target
-Now start and check the service is running.
 ```
+Now start and check the service is running.
 ```
 sudo service alertmanager start
 sudo service alertmanager status
