@@ -4,27 +4,10 @@ Open the Alert Manager config file, and replace the config with this below.
 
 ```
 sudo vi /usr/local/bin/alertmanager/alertmanager.yml
-``
+```
 copy paste below line on to alertmanager.yml
 
-```
-route:
-    group_by: [Alertname]
-    group_interval: 30s
-    repeat_interval: 30s
-    # Send all notifications to me.
-    receiver: email-me
-receivers:
-- name: email-me
-  email_configs:
-  - send_resolved: true
-    to: mail_id@gmail.com
-    from: mail_id@gmail.com
-    smarthost: smtp.gmail.com:587
-    auth_username: "mail_id@gmail.com"
-    auth_identity: "mail_id@gmail.com"
-    auth_password: "****"
-```
+
 
 Check your configuration with the supplied amtool
 
