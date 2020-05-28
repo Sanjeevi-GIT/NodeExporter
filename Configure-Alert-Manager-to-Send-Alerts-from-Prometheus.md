@@ -7,7 +7,7 @@ sudo vi /usr/local/bin/alertmanager/alertmanager.yml
 ```
 copy paste below line on to alertmanager.yml
 
-
+https://github.com/DeekshithSN/Prometheus/blob/master/alertmeanager.yml
 
 Check your configuration with the supplied amtool
 
