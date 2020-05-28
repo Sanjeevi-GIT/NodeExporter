@@ -56,3 +56,31 @@ sudo service prometheus status
 
 Refresh the Prometheus user interface and check the drop down and you will be able to see ```node_memory_MemFree_percent```
 
+## Recording Rule Example 2
+Lets do another more complicated example.
+
+Update our prometheus_rules.yml file with,
+
+```
+groups:
+  - name: custom_rules
+    rules:
+      - record: node_memory_MemFree_percent
+        expr: 100 - (100 * node_memory_MemFree_bytes / node_memory_MemTotal_bytes)
+
+      - record: node_filesystem_free_percent
+        expr: 100 * node_filesystem_free_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}
+
+```
+Check it with the promtool
+
+```
+./promtool check rules prometheus_rules.yml
+```
+If all is ok, restart the prometheus service.
+
+```
+sudo service prometheus restart
+sudo service prometheus status
+```
+Refresh the Prometheus user interface and check the drop down for ```node_filesystem_free_percent```
