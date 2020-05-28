@@ -28,5 +28,31 @@ Add our test expression as a recording rule
        rules:
          - record: node_memory_MemFree_percent
            expr: 100 - (100 * node_memory_MemFree_bytes / node_memory_MemTotal_bytes)
+```
 
+Save it and we can now verify the syntax is ok.
+
+Prometheus now comes with a tool called Promtool which you can use to check your rules files and other things.
+
+We will check our rules file is ok.
+
+
+```./promtool check rules prometheus_rules.yml```
+
+The response should contain SUCCESS otherwise there was a problem with your prometheus_rules.yml file.
+
+Now lets add the prometheus_rules.yml reference to the prometheus.yml rule_files section.
+
+```rule_files:
+     - "prometheus_rules.yml"
+```
+
+and restart the prometheus service.
+
+```
+sudo service prometheus restart
+sudo service prometheus status
+```
+
+Refresh the Prometheus user interface and check the drop down and you will be able to see ```node_memory_MemFree_percent```
 
